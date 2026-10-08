@@ -1,0 +1,32 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 引入 Google 花体字 Great Vibes 和 Pinyon Script */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&display=swap');
+
+/* 强制全局黑色背景 */
+body, html, #root {
+  background-color: #000000 !important;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* 定义花体字工具类 */
+.font-cursive {
+    /* 优先使用 Pinyon Script，更像参考图 */
+    font-family: 'Pinyon Script', cursive; 
+    /* 如果喜欢原来的可以改回 'Great Vibes' */
+}
+
+/* 旋转动画 */
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+    animation: spin-slow 10s linear infinite;
+}
